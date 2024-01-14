@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 0.5px solid black; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  background-color: #f6f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4rem;
+  /* border: 0.5px solid blue; */
+}
+
+nav li {
+  padding: 0 1rem;
+  width: 100px;
+  text-align: center;
+  padding: 8px;
+}
+
+nav ul li a {
+  color: #505050;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+nav ul li a:hover {
+  color: #df8219;
+  transition: all 0.3s ease 0s;
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+
+
+.project-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
