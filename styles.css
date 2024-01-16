@@ -87,6 +87,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: row;
   width: 1100px;
+  max-width: 80%;
   height: auto;  
   height: 50vh;
   border-radius: 20px;
@@ -128,7 +129,7 @@ nav ul li a:hover {
   }
 
   .cat-photo img {
-    min-width: 50%; 
+    min-width: 30%; 
   }
 }
 
