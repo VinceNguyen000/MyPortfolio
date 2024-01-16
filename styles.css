@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0.5px solid green;
+  /* border: 0.5px solid green; */
 }
 
 *,
@@ -19,7 +19,12 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   scroll-behavior: smooth;
-  background-image: linear-gradient(90deg, #ffffff 0%, #8f8d88 50%, #ffffff 100%);
+  background-image: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #8f8d88 50%,
+    #ffffff 100%
+  );
 }
 
 section {
@@ -88,53 +93,52 @@ nav ul li a:hover {
   flex-direction: row;
   width: 1100px;
   max-width: 80%;
-  height: auto;  
+  height: auto;
   height: 50vh;
   border-radius: 20px;
   margin: 100px auto 20px auto;
   padding: 20px;
   background-image: linear-gradient(62deg, #3a3d40 50%, #181719 100%);
-  transition: ease all .5s;
+  transition: ease all 0.5s;
 }
 
 .welcome-photos {
   display: grid;
   max-width: 300px;
-  min-width: 20%; 
-  border: 0.5px solid orange;
+  min-width: 20%;
   
 }
 
-
-.cat-photo, .vince-photo { 
-  grid-area:1/1; 
+.cat-photo,
+.vince-photo {
+  grid-area: 1/1;
 }
 
 .cat-photo img {
   width: 100%;
   border-radius: 10px;
+  border: 0.5px solid orange;
 }
 
-.vince-photo img{
+.vince-photo img {
   width: 30%;
   border-radius: 10px;
-  
-  transform: rotate(-5deg);     
+  border: 0.1px solid green;
+  transform: rotate(-5deg);
 }
 
 .vince-photo img:hover {
   width: 100%;
-  transition: ease all .5s;  
+  transition: ease all 0.5s;
 }
 
 .text-container {
-  display: flex;  
+  display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px 0px 20px 40px;
-  font-family: calibri;  
+  font-family: calibri;
   color: #ffffff;
-
 }
 
 .text-container h2 {
@@ -168,7 +172,7 @@ nav ul li a:hover {
 .text-container .intro-text span {
   color: #df8219;
   font-weight: 700;
-  font-size: 2rem;  
+  font-size: 2rem;
 }
 
 .text-container button {
@@ -240,72 +244,74 @@ nav ul li a:hover {
 }
 /*PROJECTS SECTION END*/
 
-@media (max-width:1600px) {
+@media (max-width: 1600px) {
   .welcome-section {
     flex-direction: column;
-    width:850px;
-    height: auto; 
+    width: 850px;
+    height: auto;
     align-items: center;
   }
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
   .welcome-section {
     width: 600px;
   }
 
-  .welcome-photos {    
-    width: 50%;    
+  .welcome-photos {
+    width: 50%;
   }
 
   .text-container h2 {
-    line-height: 1px;
+    font-size: 1.8rem;
   }
-  
-  .text-container h1 {
 
+  .text-container h1 {
+    font-size: 4rem;
   }
-  
+
   .text-container h1 span {
+    font-size: 4rem;
   }
-  
+
   .text-container .sub-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
-  
+
   .text-container .intro-text {
-    font-size: 1rem;
-    line-height: 2;
+    font-size: 1.4rem;
   }
-  
+
   .text-container .intro-text span {
     color: #df8219;
     font-weight: 700;
-    font-size: 2rem;  
+    font-size: 1.4rem;
   }
-  
+
   .text-container button {
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width:445px) {
+@media (max-width: 445px) {
   .welcome-photos {
     display: flex;
     width: 50%;
     align-items: center;
-  } 
+  }
 
-  .cat-photo img{
+  .cat-photo img {
     display: none;
   }
-  
+
   .vince-photo {
     display: flex;
   }
 
-  .vince-photo img{
+  .vince-photo img {
     z-index: 1;
-    transform: rotate(0deg); 
-    width: 100%;    
+    transform: rotate(0deg);
+    width: 100%;
+    border: 0.5px solid orange;
   }
 }
