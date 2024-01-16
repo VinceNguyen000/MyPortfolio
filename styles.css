@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  /* border: 0.5px solid green; */
+  border: 0.5px solid green;
 }
 
 *,
@@ -19,12 +19,12 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   scroll-behavior: smooth;
-  background-image: linear-gradient(90deg, #ffffff 30%, #f6f5f5 100%);
+  background-image: linear-gradient(90deg, #ffffff 0%, #8f8d88 50%, #ffffff 100%);
 }
 
 section {
   width: 100%;
-  justify-content: space-evenly;
+  display: block;
 }
 
 h1 {
@@ -99,33 +99,32 @@ nav ul li a:hover {
 
 .welcome-photos {
   display: grid;
-  max-width: 300px;   
+  max-width: 300px;
+  min-width: 20%; 
+  border: 0.5px solid orange;
   
-  
 }
 
 
-.welcome-photos img:nth-child(1) {
-  width: 100%;  
-  height: auto;
-  border-radius: 20px;
-  grid-area:1/1;
-  object-fit: cover;    
+.cat-photo, .vince-photo { 
+  grid-area:1/1; 
 }
 
-.welcome-photos img:nth-child(2) { 
-  width: 30%; 
-  border-radius: 20px;
-  grid-area:1/1;
-  margin-left: 200px;
-  place-self: start start ;
-  transform: rotate(5deg);  
-  transition: ease all .5s;     
-}
-
-.welcome-photos img:nth-child(2):hover {
+.cat-photo img {
   width: 100%;
+  border-radius: 10px;
+}
+
+.vince-photo img{
+  width: 30%;
+  border-radius: 10px;
   
+  transform: rotate(-5deg);     
+}
+
+.vince-photo img:hover {
+  width: 100%;
+  transition: ease all .5s;  
 }
 
 .text-container {
@@ -134,39 +133,8 @@ nav ul li a:hover {
   justify-content: center;
   padding: 20px 0px 20px 40px;
   font-family: calibri;  
-  color: #d4d4d4;
+  color: #ffffff;
 
-}
-
-@media (max-width:1600px) {
-  .welcome-section {
-    flex-direction: column;
-    width:850px;
-    height: auto; 
-    align-items: center;
-  }
-
-  .welcome-photos {
-    height: 500px;
-  }
-
-  .welcome-photos img {
-    min-width: 30%; 
-  }
-}
-
-@media (max-width:1200px) {
-  .welcome-section {
-    width: 600px;
-  }
-
-  .cat-photo img {
-    min-width: 50%; 
-  }
-}
-
-@media (max-width:445px) {
-  .welcome-photos img:nth-child(2) {  }
 }
 
 .text-container h2 {
@@ -200,14 +168,15 @@ nav ul li a:hover {
 .text-container .intro-text span {
   color: #df8219;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2rem;  
 }
 
 .text-container button {
   margin: 20px auto;
+  padding: 5px;
   width: 120px;
   height: 40px;
-  color: #d4d4d4;
+  color: #ffffff;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -226,14 +195,13 @@ nav ul li a:hover {
   grid-template-rows: 1fr 9fr;
   gap: 15px;
   margin: auto;
-  border: 0.5px solid green;
+  border: 0.5px solid blue;
   background-color: #ffffff;
 }
 
 .projects-section div {
   padding: 15px;
   font-family: Helvetica;
-
   border-radius: 15px;
 }
 
@@ -271,3 +239,73 @@ nav ul li a:hover {
   text-align: center;
 }
 /*PROJECTS SECTION END*/
+
+@media (max-width:1600px) {
+  .welcome-section {
+    flex-direction: column;
+    width:850px;
+    height: auto; 
+    align-items: center;
+  }
+}
+
+@media (max-width:1200px) {
+  .welcome-section {
+    width: 600px;
+  }
+
+  .welcome-photos {    
+    width: 50%;    
+  }
+
+  .text-container h2 {
+    line-height: 1px;
+  }
+  
+  .text-container h1 {
+
+  }
+  
+  .text-container h1 span {
+  }
+  
+  .text-container .sub-title {
+    font-size: 1.6rem;
+  }
+  
+  .text-container .intro-text {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  
+  .text-container .intro-text span {
+    color: #df8219;
+    font-weight: 700;
+    font-size: 2rem;  
+  }
+  
+  .text-container button {
+  }
+}
+
+@media (max-width:445px) {
+  .welcome-photos {
+    display: flex;
+    width: 50%;
+    align-items: center;
+  } 
+
+  .cat-photo img{
+    display: none;
+  }
+  
+  .vince-photo {
+    display: flex;
+  }
+
+  .vince-photo img{
+    z-index: 1;
+    transform: rotate(0deg); 
+    width: 100%;    
+  }
+}
