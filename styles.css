@@ -19,17 +19,18 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   scroll-behavior: smooth;
-  background-image: linear-gradient(
-    90deg,
-    #ffffff 0%,
-    #8f8d88 50%,
-    #ffffff 100%
-  );
+  background-image: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
+}
+
+.null-container {
+   width: 100%;
+   padding-top: 50px; 
 }
 
 section {
   width: 100%;
-  display: block;
+  padding-top: 100px;
+  position: relative;
 }
 
 h1 {
@@ -50,6 +51,8 @@ a {
 
 /*NAVBAR SECTION*/
 nav {
+  display: flex;
+  justify-content: flex-end;
   position: fixed;
   top: 0;
   left: 0;
@@ -59,13 +62,9 @@ nav {
   z-index: 1;
 }
 
-nav ul {
+.nav-list {
   display: flex;
-  height: 80px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 4rem;
+  margin-right: 2rem;
 }
 
 nav li {
@@ -91,12 +90,12 @@ nav ul li a:hover {
 .welcome-section {
   display: flex;
   flex-direction: row;
-  width: 1100px;
-  max-width: 80%;
-  height: auto;
-  height: 50vh;
+  width: 80%;
+  max-width: 1280px;
+  margin: auto;
+
   border-radius: 20px;
-  margin: 100px auto 20px auto;
+  margin: 80px auto 20px auto;
   padding: 20px;
   background-image: linear-gradient(62deg, #3a3d40 50%, #181719 100%);
   transition: ease all 0.5s;
@@ -106,7 +105,6 @@ nav ul li a:hover {
   display: grid;
   max-width: 300px;
   min-width: 20%;
-  
 }
 
 .cat-photo,
@@ -123,7 +121,6 @@ nav ul li a:hover {
 .vince-photo img {
   width: 30%;
   border-radius: 10px;
-  border: 0.1px solid green;
   transform: rotate(-5deg);
 }
 
@@ -192,34 +189,33 @@ nav ul li a:hover {
 /*WELCOME SECTION END*/
 /*PROJECTS SECTION*/
 .projects-section {
-  height: 50vh;
   width: 80%;
-  text-align: center;
+  max-width: 1280px;
+  margin: auto;
   display: grid;
   grid-template-rows: 1fr 9fr;
   gap: 15px;
-  margin: auto;
-  border: 0.5px solid blue;
-  background-color: #ffffff;
 }
 
 .projects-section div {
   padding: 15px;
   font-family: Helvetica;
-  border-radius: 15px;
 }
 
 .projects-intro {
-  background-color: ;
+  max-width: 640px;
+  margin: 0 auto 1rem auto;
+  border-bottom: 0.2rem solid;
+  color: #505050;
   grid-column: 1 / 3;
 }
 
 .article {
-  background-color: ;
   display: grid;
   grid-column: 1 / 3;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  border: 0.5px solid red;
+  margin: 0 auto;
+  margin-bottom: 6rem;
 }
 
 .article,
@@ -230,6 +226,7 @@ nav ul li a:hover {
 
 .article .card {
   text-align: center;
+  background-image: linear-gradient(62deg, #3a3d40 50%, #181719 100%);
 }
 
 .card p {
@@ -245,9 +242,16 @@ nav ul li a:hover {
 /*PROJECTS SECTION END*/
 
 @media (max-width: 1600px) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+
   .welcome-section {
     flex-direction: column;
-    width: 850px;
     height: auto;
     align-items: center;
   }
@@ -255,7 +259,7 @@ nav ul li a:hover {
 
 @media (max-width: 1200px) {
   .welcome-section {
-    width: 600px;
+    width: 60%;
   }
 
   .welcome-photos {
