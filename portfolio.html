@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   </head>
   <body>
     <!-- HEADER SECTION -->
@@ -25,11 +26,11 @@
     </header>
     <!-- HEADER SECTION END -->
     <!-- WELCOME SECTION -->
-    <div id="welcome"  class="null-container"></div>
+    <div id="welcome" class="null-container"></div>
     <section class="welcome-section">
       <div class="welcome-photos">
         <div class="cat-photo">
-          <img  src="photos/cat.jpg" alt="cat-photo" />
+          <img src="photos/cat.jpg" alt="cat-photo" />
         </div>
         <div class="vince-photo">
           <img src="photos/Vince.jfif" alt="" />
@@ -53,64 +54,48 @@
     </section>
     <!-- WELCOME SECTION END -->
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="projects-section">
+    <div id="projects" class="null-container"></div>
+    <section id="#projects" class="projects-section">
       <div class="projects-intro">
         <h2>These are some of my projects</h2>
-      </div>      
-      <div class="article">
-        <div class="card">
-          <p class="title">Article Title</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud...
-          </p>
-        </div>
-        <div class="card">
-          <p class="title">Article Title</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud...
-          </p>
-        </div>
-        <div class="card">
-          <p class="title">Article Title</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud...
-          </p>
-        </div>
-        <div class="card">
-          <p class="title">Article Title</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud...
-          </p>
-        </div>
-        <div class="card">
-          <p class="title">Article Title</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud...
-          </p>
-        </div>
       </div>
+      <div class="projects-grid">
+        <div class="grid-container">
+          <a href="" class="card">            
+            <div><img src="photos/tic tac toe.jpg" alt="tic tac toe" /></div>
+            <div><p class="title">Tic Tac Toe Game</p></div>
+          </a>
+        </div>
+        <div class="grid-container">
+          <a           
+          href="https://github.com/VinceNguyen000/Congressional_tweet" 
+          target="_blank" 
+          class="card">            
+            <div><img src="photos/twitter.jpg" alt="twitter" /></div>
+            <div><p class="title">Neural Network-Congressional Tweet</p></div>
+          </a>
+        </div>
+        <div class="grid-container">
+          <a
+           href="https://github.com/VinceNguyen000/Deep-Learning-in-Image-Classification" 
+           target="_blank" 
+           class="card">            
+            <div><img src="photos/image-classification.jpg" alt="image-classification" /></div>
+            <div><p class="title">Deep Learning in Image Classification</p></div>
+          </a>
+        </div>
+        <div class="grid-container">
+          <a href="" class="card">            
+            <div><img src="" alt="" /></div>
+            <div><p class="title">Unity Mini Game</p></div>
+          </a>
+        </div>
       <!--  -->
     </section>
     <!-- PROJECTS SECTION END -->
     <!-- CONTACTS SECTION -->
     <section id="contact" class="contact-section">
       <div class="contact-links">
-        <a
-          href="https://facebook.com/freecodecamp"
-          target="_blank"
-          class="btn contact-details"
-          ><i class="fab fa-facebook-square"></i> Facebook</a
-        >
         <a
           id="profile-link"
           href="https://github.com/freecodecamp"
@@ -121,16 +106,13 @@
         <a
           href="/cdn-cgi/l/email-protection#8aeff2ebe7fae6efcaeff2ebe7fae6efa4e9e5e7"
           class="btn contact-details"
-          ><i class="fas fa-at"></i> Send a mail</a
+          ><i class="fas fa-at"></i> Email</a
         >
-        <a href="tel:555-555-5555" class="btn contact-details"
-          ><i class="fas fa-mobile-alt"></i> Text me</a
+        <a role="text" class="btn contact-details" aria-disabled="true"
+          ><i class="fas fa-mobile-alt"></i> Text me: +1 (913) 217-8699</a
         >
       </div>
     </section>
     <!-- CONTACTS SECTION -->
   </body>
-  <!-- FOOTER SECTION -->
-  <footer></footer>
-  <!-- FOOTER SECTION END -->
 </html>
